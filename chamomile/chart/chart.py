@@ -112,5 +112,30 @@ class Chart:
         self.figure.title.text = title
         return self
 
-    def show(self):
-        self.figure.show()
+    def show(self, format='html'):
+            """Show the chart.
+            Args:
+                format (str):
+                    - 'html': Output chart as HTML.
+                        Renders faster and allows for interactivity.
+                        Charts saved as HTML in a Jupyter notebooks
+                        WILL NOT display on Github.
+                        Logos will not display on HTML charts.
+                        Recommended when drafting plots.
+                    - 'png': Output chart as PNG.
+                        Easy to copy+paste into slides.
+                        Will render logos.
+                        Recommended when the plot is in a finished state.
+                    - 'svg': Output as SVG.
+                    """
+            self._set_toolbar_for_format(format)
+
+            if format == 'html':
+                return bokeh.io.show(self.figure)
+            elif format == 'png':
+                image = self._figure_to_png()
+                # Need to re-enable this when logos are added back.
+                # image = self.logo._add_logo_to_image(image)
+                return display(image)
+            elif format == 'svg':
+                return self._show_svg()
