@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"Chart": "chart.ipynb",
+         "BasePlot": "chart_base_plot.ipynb",
          "default_palette": "chart_color.ipynb",
          "color_types": "chart_color.ipynb",
          "palette_contrast2": "chart_color.ipynb",
@@ -16,6 +17,7 @@ index = {"Chart": "chart.ipynb",
          "dotdict": "utils_dotdict.ipynb"}
 
 modules = ["chart/chart.py",
+           "chart/base_plot.py",
            "chart/color.py",
            "chart/data_model.py",
            "chart/plot_bar.py",

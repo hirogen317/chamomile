@@ -13,31 +13,36 @@ from bokeh.io import show
 class PlotBar():
 
     def __init__(self, chart = None):
-        if chart is None:
-            self._chart = Chart(x_axis_type='categorical', plot_width=600, plot_height=400)
+        x_axis_type = 'categorical'
+        super().__init__(chart=chart, x_axis_type=None)
 
-    @property
-    def chart(self):
-        return self._chart
 
     def set_properties(**kwargs):
         if 'title' in kwargs:
             self._chart.set_title(kwargs['title'])
         return self
 
-    def bar(data_frame: pd.DataFrame, c_col: str=None, v_col: str=None, text_col: str=None, title: str=None):
-        source = construct_categorical_data(data_frame, c_col=c_col, v_col=v_col, text_col=text_col)
+    def bar(self, data_frame: pd.DataFrame, category: str=None, value: float=None, text: str=None, color: str=None, title: str=None):
+        source = construct_categorical_data(data_frame, c_col=category, v_col=value, text_col=text)
         print(source.data)
-        p = self.chart.figure
+        p = self._chart.figure
         if title is not None:
-            chart.set_title(title)
+            self._chart.set_title(title)
 
-        p.x_range = FactorRange(factors=data_frame[c_col].values)
-        print(data_frame[c_col].values)
-        p.y_range = Range1d(0, data_frame[v_col].max() * 1.1)
+        p.x_range = FactorRange(factors=data_frame[category].values)
+        print(data_frame[category].values)
+        p.y_range = Range1d(0, data_frame[value].max() * 1.1)
         p.vbar(x='category', top='value', width=0.5, source=source)
 
         return self
 
-    def show():
-        show(self._chart)
+    def bar_stacked(self, data_frame: pd.DataFrame, category: str=None, value: str=None,
+                    stack: str=None, text: str=None, color: str=None, title: str=None):
+        return self
+
+    def bar_cascade(self, data_frame: pd.DataFrame):
+        return self
+
+    def bar_transition(self, data_frame: pd.DataFrame):
+        return self
+
