@@ -2,22 +2,20 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"hello": "00_core.ipynb",
-         "Chart": "chart.ipynb",
+index = {"Chart": "chart.ipynb",
          "default_palette": "chart_color.ipynb",
          "color_types": "chart_color.ipynb",
          "palette_contrast2": "chart_color.ipynb",
          "palette_compare3": "chart_color.ipynb",
          "construct_categorical_data": "chart_data_model.ipynb",
-         "bar": "chart_plot_bar.ipynb",
+         "PlotBar": "chart_plot_bar.ipynb",
          "Style": "chart_style.ipynb",
          "cast_date": "data_processing_time_series.ipynb",
          "count_time_value": "data_processing_time_series.ipynb",
          "time_over_time": "data_processing_time_series.ipynb",
-         "dotdict": "util_dotdict.ipynb"}
+         "dotdict": "utils_dotdict.ipynb"}
 
-modules = ["core.py",
-           "chart/chart.py",
+modules = ["chart/chart.py",
            "chart/color.py",
            "chart/data_model.py",
            "chart/plot_bar.py",

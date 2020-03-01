@@ -7,24 +7,39 @@ entries:
 - folders:
   - folderitems:
     - output: web,pdf
-      title: Export to modules
-      url: /export.html
+      title: Overview
+      url: /
     - output: web,pdf
-      title: Convert to html
-      url: /export2html.html
+      title: casual_inference.random_control_test
+      url: /casual_inference_stats_test
     - output: web,pdf
-      title: Show doc
-      url: /showdoc.html
+      title: Title
+      url: /utils_slack
     - output: web,pdf
-      title: Test functions
-      url: /test.html
+      title: chart.color
+      url: /chart_color
     - output: web,pdf
-      title: Core functions
-      url: /core.html
+      title: chart.data_format
+      url: /chart_data_format
     - output: web,pdf
-      title: Command line functions
-      url: /cli.html
+      title: chart.data_model
+      url: /chart_data_model
+    - output: web,pdf
+      title: data_processing.categorical
+      url: /data_processing_categorical
+    - output: web,pdf
+      title: data_processing.numeric
+      url: /data_processing_numeric
+    - output: web,pdf
+      title: utils.dotdict
+      url: /utils_dotdict
+    - output: web,pdf
+      title: utils.google_sheet
+      url: /utils_google_sheet
+    - output: web,pdf
+      title: utils.web
+      url: /utils_web
     output: web
-    title: Notebook
+    title: chamomile
   output: web
   title: Sidebar

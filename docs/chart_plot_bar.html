@@ -35,8 +35,20 @@ summary: "summary"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+</div>
+
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
@@ -49,15 +61,61 @@ summary: "summary"
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-db9792237ca3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># export</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">class</span> PlotBar<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-green-fg">def</span> __init__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> chart <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>         <span class="ansi-green-fg">if</span> chart <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-5-db9792237ca3&gt;</span> in <span class="ansi-cyan-fg">PlotBar</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span>         <span class="ansi-green-fg">return</span> self
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-fg">---&gt; 17</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">def</span> bar<span class="ansi-blue-fg">(</span>data_frame<span class="ansi-blue-fg">:</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">,</span> c_col<span class="ansi-blue-fg">:</span> str<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> v_col<span class="ansi-blue-fg">:</span> str<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> text_col<span class="ansi-blue-fg">:</span> str<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> title<span class="ansi-blue-fg">:</span> str<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>         source <span class="ansi-blue-fg">=</span> construct_categorical_data<span class="ansi-blue-fg">(</span>data_frame<span class="ansi-blue-fg">,</span> c_col<span class="ansi-blue-fg">=</span>c_col<span class="ansi-blue-fg">,</span> v_col<span class="ansi-blue-fg">=</span>v_col<span class="ansi-blue-fg">,</span> text_col<span class="ansi-blue-fg">=</span>text_col<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span>         print<span class="ansi-blue-fg">(</span>source<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="bar" class="doc_header"><code>bar</code><a href="https://github.com/hirogen317/chamomile/tree/master/chamomile/chart/plot_bar.py#L13" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>bar</code>(<strong><code>data_frame</code></strong>:<code>DataFrame</code>, <strong><code>c_col</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>v_col</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>text_col</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>title</code></strong>:<code>str</code>=<em><code>None</code></em>)</p>
+<h2 id="PlotBar" class="doc_header"><code>class</code> <code>PlotBar</code><a href="https://github.com/hirogen317/chamomile/tree/master/chamomile/chart/plot_bar.py#L13" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PlotBar</code>(<strong><code>chart</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

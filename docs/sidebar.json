@@ -1,10 +1,15 @@
 {
-  "Notebook": {
-    "Export to modules": "/export",
-    "Convert to html": "/export2html",
-    "Show doc": "/showdoc",
-    "Test functions": "/test",
-    "Core functions": "/core",
-    "Command line functions": "/cli"
+  "chamomile": {
+    "Overview": "/",
+    "casual_inference.random_control_test": "/casual_inference_stats_test",
+    "Title": "/utils_slack",
+    "chart.color": "/chart_color",
+    "chart.data_format": "/chart_data_format",
+    "chart.data_model": "/chart_data_model",
+    "data_processing.categorical": "/data_processing_categorical",
+    "data_processing.numeric": "/data_processing_numeric",
+    "utils.dotdict": "/utils_dotdict",
+    "utils.google_sheet": "/utils_google_sheet",
+    "utils.web": "/utils_web"
   }
 }
