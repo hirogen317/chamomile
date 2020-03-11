@@ -24,16 +24,22 @@ class Chart:
         self.style = Style(self)
         self.figure = self._initialize_figure(x_axis_type, y_axis_type)
         self.style._apply_settings('chart')
+        self._subtitle_glyph = self._add_subtitle_to_figure()
 
 
     def _initialize_figure(self, x_axis_type, y_axis_type):
         x_range = None
         y_range = None
+
         if x_axis_type == 'categorical':
             x_range = []
         if y_axis_type == 'categorical':
             y_range = []
-        figure = bokeh.plotting.figure(x_range = x_range, y_range=y_range,
+        if x_axis_type == 'categorical' or y_axis_type == 'categorical':
+            figure = bokeh.plotting.figure(x_range = x_range, y_range=y_range,
+                                       plot_width = self.plot_width, plot_height=self.plot_height)
+        else:
+            figure = bokeh.plotting.figure(x_axis_type = x_axis_type, y_axis_type=y_axis_type,
                                        plot_width = self.plot_width, plot_height=self.plot_height)
         return figure
 
@@ -76,15 +82,15 @@ class Chart:
     def _add_subtitle_to_figure(self, subtitle_text=None):
         if subtitle_text is None:
             subtitle_text = ""
-        subtitle_settings = self.style._get_setting('subtitle')
+        subtitle_settings = self.style._get_settings('subtitle')
         _subtitle_glyph = bokeh.models.Title(
             text = subtitle_text,
-            align = subtitle_settings.subtitle_align,
-            text_color = subtitle_settings.subtitle_text_color,
+            align = subtitle_settings['subtitle_align'],
+            text_color = subtitle_settings['subtitle_text_color'],
 
         )
 
-        self.figure.add_glyph(_subtitle_glyph)
+        self.figure.add_layout(_subtitle_glyph, subtitle_settings['subtitle_location'])
         return _subtitle_glyph
 
     def set_x_axis_label(self, x_axis_label):
@@ -94,7 +100,7 @@ class Chart:
         return self
 
     def set_subtitle(self, subtitle):
-        self._subtitle.text = subtitle
+        self._subtitle_glyph.text = subtitle
         return self
 
     def set_source(self, source):

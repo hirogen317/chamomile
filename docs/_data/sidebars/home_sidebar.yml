@@ -25,6 +25,9 @@ entries:
       title: chart.data_model
       url: /chart_data_model
     - output: web,pdf
+      title: chart.plot_area
+      url: /chart_plot_area
+    - output: web,pdf
       title: data_processing.categorical
       url: /data_processing_categorical
     - output: web,pdf

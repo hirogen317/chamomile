@@ -15,6 +15,7 @@ seaborn = "*"
 sklearn = "*"
 nbdev = "*"
 chamomile = {editable = true,path = "."}
+appnope = "*"
 
 [requires]
 python_version = "3.7"

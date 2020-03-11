@@ -4,35 +4,41 @@ __all__ = ['PlotBar']
 
 # Cell
 from .chart import Chart
+from .base_plot import BasePlot
 from .data_model import construct_categorical_data
 import pandas as pd
 from bokeh.models.ranges import FactorRange, Range1d
+from bokeh.models import Text
 from bokeh.io import show
+import math
 
 # Cell
-class PlotBar():
+class PlotBar(BasePlot):
 
     def __init__(self, chart = None):
         x_axis_type = 'categorical'
-        super().__init__(chart=chart, x_axis_type=None)
+        super().__init__(chart=chart, x_axis_type=x_axis_type)
 
-
-    def set_properties(**kwargs):
-        if 'title' in kwargs:
-            self._chart.set_title(kwargs['title'])
-        return self
 
     def bar(self, data_frame: pd.DataFrame, category: str=None, value: float=None, text: str=None, color: str=None, title: str=None):
         source = construct_categorical_data(data_frame, c_col=category, v_col=value, text_col=text)
-        print(source.data)
+
         p = self._chart.figure
         if title is not None:
             self._chart.set_title(title)
 
         p.x_range = FactorRange(factors=data_frame[category].values)
-        print(data_frame[category].values)
         p.y_range = Range1d(0, data_frame[value].max() * 1.1)
-        p.vbar(x='category', top='value', width=0.5, source=source)
+        p.yaxis.formatter = self.tick_formater('integer')
+        if data_frame[category].nunique() > 5:
+            p.xaxis.major_label_orientation = math.pi/2
+
+        p.vbar(x='category', top='value', width=0.5,color=self.next_color(), source=source)
+        y_offset = 20
+#        y_offset = data_frame[value].max() * 0.1
+        if text is not None:
+            text_glyph = Text(x="category", y="value", y_offset=y_offset, text="text", text_align='center', text_font_size='10pt', text_color="white")
+            p.add_glyph(source, text_glyph)
 
         return self
 

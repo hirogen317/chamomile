@@ -9,10 +9,12 @@ from bokeh.models import ColumnDataSource
 # Cell
 def construct_categorical_data(data_frame: pd.DataFrame, c_col: str=None, v_col: str=None,
                                color_col: str=None, text_col: str=None):
+
     source = ColumnDataSource(data={
         'category': data_frame[c_col].values,
-        'value': data_frame[v_col].values,
-        'text': data_frame[text_col].values
+        'value': data_frame[v_col].values
     })
+    if text_col is not None:
+        source.add(data_frame[text_col].values, 'text')
 
     return source

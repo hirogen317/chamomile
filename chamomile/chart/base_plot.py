@@ -5,16 +5,55 @@ __all__ = ['BasePlot']
 # Cell
 from .chart import Chart
 from bokeh.io import show
+from bokeh.io import output_notebook
+from .color import ColorDefault, ColorContrast2
+from bokeh.models.formatters import DatetimeTickFormatter, NumeralTickFormatter
 
 # Cell
 class BasePlot():
 
-    def __init__(self, chart=None, x_axis_type=None, y_axis_type=None):
+    def __init__(self, chart=None, x_axis_type='linear', y_axis_type='linear', palette=None):
         if chart is None:
             self._chart = Chart(x_axis_type=x_axis_type, y_axis_type=y_axis_type, plot_width=600, plot_height=400)
+        self.color_cursor = 0
+        if palette is None:
+            palette = ColorContrast2()
+        self._palette = palette
+
+    def hide_x():
+        self._chart.figure.xaxis.major_tick_line_color = None
+        self._chart.figure.xaxis.minor_tick_line_color = None
+
+    def hide_y():
+        self._chart.figure.yaxis.major_tick_line_color = None
+        self._chart.figure.yaxis.minor_tick_line_color = None
+
+    def tick_formater(self, data_type):
+        if data_type == 'datetime':
+            formatter = DatetimeTickFormatter(**dict(
+                            days='%Y-%m-%d',
+                            months='%Y-%m',
+                            hours='%Y-%m-%d %H',
+                            minutes='%Y-%m-%d %H:%M'))
+        elif data_type == 'integer':
+            formatter = NumeralTickFormatter(format='0,0')
+        return formatter
+
+    def set_properties(self, **kwargs):
+        if 'title' in kwargs:
+            self._chart.set_title(kwargs['title'])
+        if 'subtitle' in kwargs:
+            self._chart.set_subtitle(kwargs['subtitle'])
+        return self
 
     def show(self):
         show(self._chart.figure)
+
+    def set_palette(self, palette):
+        self._palette = palette
+
+    def next_color(self):
+        return self._palette.next_color()
 
     @property
     def chart(self):

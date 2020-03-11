@@ -18,24 +18,8 @@ summary: "summary"
 -->
 
 <div class="container" id="notebook-container">
-    {% raw %}
-        
+    
 <div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/hiroshigen/.local/share/virtualenvs/chamomile-nFZmgkqr/lib/python3.7/site-packages/pandas/compat/__init__.py:117: UserWarning: Could not import the lzma module. Your installed Python is incomplete. Attempting to use lzma compression will result in a RuntimeError.
-  warnings.warn(msg)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
@@ -48,6 +32,21 @@ summary: "summary"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -81,7 +80,7 @@ summary: "summary"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="PlotBar" class="doc_header"><code>class</code> <code>PlotBar</code><a href="https://github.com/hirogen317/chamomile/tree/master/chamomile/chart/plot_bar.py#L13" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PlotBar</code>(<strong><code>chart</code></strong>=<em><code>None</code></em>)</p>
+<h2 id="PlotBar" class="doc_header"><code>class</code> <code>PlotBar</code><a href="https://github.com/hirogen317/chamomile/tree/master/chamomile/chart/plot_bar.py#L16" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PlotBar</code>(<strong><code>chart</code></strong>=<em><code>None</code></em>) :: <a href="/chamomile/chart_base_plot#BasePlot"><code>BasePlot</code></a></p>
 </blockquote>
 
 </div>
@@ -99,7 +98,7 @@ summary: "summary"
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;fruits&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">,</span> <span class="s1">&#39;kaki&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;cnt&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+    <span class="s1">&#39;cnt&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30220</span><span class="p">,</span> <span class="mi">20220</span><span class="p">,</span> <span class="mi">50220</span><span class="p">]</span>
 <span class="p">}</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -143,17 +142,17 @@ summary: "summary"
     <tr>
       <th>0</th>
       <td>apple</td>
-      <td>300</td>
+      <td>30220</td>
     </tr>
     <tr>
       <th>1</th>
       <td>melon</td>
-      <td>200</td>
+      <td>20220</td>
     </tr>
     <tr>
       <th>2</th>
       <td>kaki</td>
-      <td>500</td>
+      <td>50220</td>
     </tr>
   </tbody>
 </table>
@@ -171,7 +170,9 @@ summary: "summary"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plotbar</span> <span class="o">=</span> <span class="n">PlotBar</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="k">import</span> <span class="n">output_notebook</span>
+<span class="n">output_notebook</span><span class="p">()</span>
+<span class="n">plotbar</span> <span class="o">=</span> <span class="n">PlotBar</span><span class="p">()</span>
 <span class="n">plotbar</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s1">&#39;fruits&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;cnt&#39;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;cnt&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Fruits number&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -184,11 +185,322 @@ summary: "summary"
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;category&#39;: array([&#39;apple&#39;, &#39;melon&#39;, &#39;kaki&#39;], dtype=object), &#39;value&#39;: array([300, 200, 500]), &#39;text&#39;: array([300, 200, 500])}
-[&#39;apple&#39; &#39;melon&#39; &#39;kaki&#39;]
-</pre>
+
+<div class="output_html rendered_html output_subarea ">
+
+    <div class="bk-root">
+        <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
+        <span id="13437">Loading BokehJS ...</span>
+    </div>
 </div>
+
+</div>
+
+<div class="output_area">
+
+
+
+
+<div id="9e5575f5-f9e3-4489-91df-be6eac8647eb"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#9e5575f5-f9e3-4489-91df-be6eac8647eb');
+
+(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  var force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+  var JS_MIME_TYPE = 'application/javascript';
+  var HTML_MIME_TYPE = 'text/html';
+  var EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  var CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    var script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    var cell = handle.cell;
+
+    var id = cell.output_area._bokeh_element_id;
+    var server_id = cell.output_area._bokeh_server_id;
+    // Clean up Bokeh references
+    if (id != null && id in Bokeh.index) {
+      Bokeh.index[id].model.document.clear();
+      delete Bokeh.index[id];
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      var cmd = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd, {
+        iopub: {
+          output: function(msg) {
+            var id = msg.content.text.trim();
+            if (id in Bokeh.index) {
+              Bokeh.index[id].model.document.clear();
+              delete Bokeh.index[id];
+            }
+          }
+        }
+      });
+      // Destroy server and session
+      var cmd = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    var output_area = handle.output_area;
+    var output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
+      return
+    }
+
+    var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      var bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      var script_attrs = bk_div.children[0].attributes;
+      for (var i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      var toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    var events = require('base/js/events');
+    var OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+
+  
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  var NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded() {
+    var el = document.getElementById("13437");
+    if (el != null) {
+      el.textContent = "BokehJS is loading...";
+    }
+    if (root.Bokeh !== undefined) {
+      if (el != null) {
+        el.textContent = "BokehJS " + root.Bokeh.version + " successfully loaded.";
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(display_loaded, 100)
+    }
+  }
+
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error() {
+      console.error("failed to load " + url);
+    }
+
+    for (var i = 0; i < css_urls.length; i++) {
+      var url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };var element = document.getElementById("13437");
+  if (element == null) {
+    console.error("Bokeh: ERROR: autoload.js configured with elementid '13437' but no matching script tag was found. ")
+    return false;
+  }
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  
+  var js_urls = ["https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.4.0.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-tables-1.4.0.min.js", "https://cdn.pydata.org/bokeh/release/bokeh-gl-1.4.0.min.js"];
+  var css_urls = [];
+  
+
+  var inline_js = [
+    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+    function(Bokeh) {
+    
+    
+    }
+  ];
+
+  function run_inline_js() {
+    
+    if (root.Bokeh !== undefined || force === true) {
+      
+    for (var i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+    if (force === true) {
+        display_loaded();
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      var cell = $(document.getElementById("13437")).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));
+</script>
+</div>
+
 </div>
 
 <div class="output_area">
@@ -196,7 +508,7 @@ summary: "summary"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.PlotBar at 0x7fefd76a5f28&gt;</pre>
+<pre>&lt;__main__.PlotBar at 0x116be3748&gt;</pre>
 </div>
 
 </div>
@@ -210,30 +522,86 @@ summary: "summary"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plotbar</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plotbar</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="n">subtitle</span><span class="o">=</span><span class="s1">&#39;hokehoke&#39;</span><span class="p">)</span>
+<span class="n">plotbar</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="output_wrapper">
+<div class="output">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;&#39;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="output_area">
 
-    </div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>set subtitle
+set_subtitle
+</pre>
 </div>
 </div>
 
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+
+
+
+
+
+  <div class="bk-root" id="00ff2294-8f2f-48f9-9bc5-949f981323f5" data-root-id="13438"></div>
+
 </div>
-    {% endraw %}
+
+</div>
+
+<div class="output_area">
+
+
+
+
+<div id="1544f8d6-1459-40c5-8614-160791a3d5bc"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#1544f8d6-1459-40c5-8614-160791a3d5bc');
+(function(root) {
+  function embed_document(root) {
+    
+  var docs_json = {"450f263a-45cf-4982-8657-1a18f31c93c5":{"roots":{"references":[{"attributes":{"above":[{"id":"13473","type":"Title"}],"background_fill_color":{"value":"white"},"below":[{"id":"13447","type":"CategoricalAxis"}],"border_fill_color":{"value":"white"},"center":[{"id":"13450","type":"Grid"},{"id":"13455","type":"Grid"}],"left":[{"id":"13451","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"13483","type":"GlyphRenderer"},{"id":"13486","type":"GlyphRenderer"}],"title":{"id":"13469","type":"Title"},"toolbar":{"id":"13462","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"13476","type":"FactorRange"},"x_scale":{"id":"13443","type":"CategoricalScale"},"y_range":{"id":"13477","type":"Range1d"},"y_scale":{"id":"13445","type":"LinearScale"}},"id":"13438","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"13461","type":"HelpTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"13456","type":"PanTool"},{"id":"13457","type":"WheelZoomTool"},{"id":"13458","type":"BoxZoomTool"},{"id":"13459","type":"SaveTool"},{"id":"13460","type":"ResetTool"},{"id":"13461","type":"HelpTool"}]},"id":"13462","type":"Toolbar"},{"attributes":{"text":"hokehoke","text_color":{"value":"#666666"}},"id":"13473","type":"Title"},{"attributes":{},"id":"13837","type":"CategoricalTickFormatter"},{"attributes":{"text":"Fruits number","text_color":{"value":"#333333"},"text_font_size":{"value":"16pt"}},"id":"13469","type":"Title"},{"attributes":{"callback":null,"factors":["apple","melon","kaki"]},"id":"13476","type":"FactorRange"},{"attributes":{"grid_line_color":null,"ticker":{"id":"13448","type":"CategoricalTicker"}},"id":"13450","type":"Grid"},{"attributes":{},"id":"13839","type":"Selection"},{"attributes":{"callback":null,"data":{"category":["apple","melon","kaki"],"text":[30220,20220,50220],"value":[30220,20220,50220]},"selected":{"id":"13839","type":"Selection"},"selection_policy":{"id":"13840","type":"UnionRenderers"}},"id":"13474","type":"ColumnDataSource"},{"attributes":{},"id":"13448","type":"CategoricalTicker"},{"attributes":{},"id":"13445","type":"LinearScale"},{"attributes":{"fill_color":{"value":"#d62728"},"line_color":{"value":"#d62728"},"top":{"field":"value"},"width":{"value":0.5},"x":{"field":"category"}},"id":"13481","type":"VBar"},{"attributes":{},"id":"13840","type":"UnionRenderers"},{"attributes":{"data_source":{"id":"13474","type":"ColumnDataSource"},"glyph":{"id":"13481","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"13482","type":"VBar"},"selection_glyph":null,"view":{"id":"13484","type":"CDSView"}},"id":"13483","type":"GlyphRenderer"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"13452","type":"BasicTicker"}},"id":"13455","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"value"},"width":{"value":0.5},"x":{"field":"category"}},"id":"13482","type":"VBar"},{"attributes":{"overlay":{"id":"13841","type":"BoxAnnotation"}},"id":"13458","type":"BoxZoomTool"},{"attributes":{"data_source":{"id":"13474","type":"ColumnDataSource"},"glyph":{"id":"13485","type":"Text"},"hover_glyph":null,"muted_glyph":null,"view":{"id":"13487","type":"CDSView"}},"id":"13486","type":"GlyphRenderer"},{"attributes":{},"id":"13478","type":"NumeralTickFormatter"},{"attributes":{},"id":"13452","type":"BasicTicker"},{"attributes":{"source":{"id":"13474","type":"ColumnDataSource"}},"id":"13487","type":"CDSView"},{"attributes":{},"id":"13456","type":"PanTool"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"13478","type":"NumeralTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"13452","type":"BasicTicker"}},"id":"13451","type":"LinearAxis"},{"attributes":{},"id":"13457","type":"WheelZoomTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"13841","type":"BoxAnnotation"},{"attributes":{"source":{"id":"13474","type":"ColumnDataSource"}},"id":"13484","type":"CDSView"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"13837","type":"CategoricalTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"13448","type":"CategoricalTicker"}},"id":"13447","type":"CategoricalAxis"},{"attributes":{},"id":"13443","type":"CategoricalScale"},{"attributes":{"text_align":"center","text_color":{"value":"white"},"text_font_size":{"value":"10pt"},"x":{"field":"category"},"y":{"field":"value"},"y_offset":{"value":20}},"id":"13485","type":"Text"},{"attributes":{"callback":null,"end":55242.00000000001},"id":"13477","type":"Range1d"},{"attributes":{},"id":"13459","type":"SaveTool"},{"attributes":{},"id":"13460","type":"ResetTool"}],"root_ids":["13438"]},"title":"Bokeh Application","version":"1.4.0"}};
+  var render_items = [{"docid":"450f263a-45cf-4982-8657-1a18f31c93c5","roots":{"13438":"00ff2294-8f2f-48f9-9bc5-949f981323f5"}}];
+  root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 </div>
  
 

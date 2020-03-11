@@ -31,6 +31,9 @@ class Style:
                 'figure.title.text_font': 'helvetica',
                 'figure.title.text_color': '#333333',
                 'figure.title.text_font_size': "16pt",
+                'figure.toolbar.logo': None,
+                'figure.toolbar_location': None
+
             },
             'subtitle': {
                 'subtitle_align': 'left',
@@ -110,3 +113,7 @@ class Style:
     def _apply_settings(self, key):
         setting_values = self.settings[key]
         self._apply_bokeh_settings(setting_values)
+
+    def _get_settings(self, key):
+        setting_values = self.settings[key]
+        return setting_values
