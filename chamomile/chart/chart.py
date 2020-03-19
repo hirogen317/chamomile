@@ -47,6 +47,14 @@ class Chart:
     def mask(self):
         pass
 
+    def set_xlabel(self, label):
+        self.figure.xaxis.axis_label = label
+        return self
+
+    def set_ylabel(self, label):
+        self.figure.yaxis.axis_label = label
+        return self
+
     def set_notion(self, title=None, subtitle=None, x_axis_label=None, y_axis_label=None,source=None):
         if title:
             self.set_title(title)

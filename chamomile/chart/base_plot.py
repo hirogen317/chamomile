@@ -36,7 +36,11 @@ class BasePlot():
                             hours='%Y-%m-%d %H',
                             minutes='%Y-%m-%d %H:%M'))
         elif data_type == 'integer':
+            print('integer')
             formatter = NumeralTickFormatter(format='0,0')
+        elif data_type == 'float':
+            print('float')
+            formatter = NumeralTickFormatter(format='0.000')
         return formatter
 
     def set_properties(self, **kwargs):
@@ -44,6 +48,10 @@ class BasePlot():
             self._chart.set_title(kwargs['title'])
         if 'subtitle' in kwargs:
             self._chart.set_subtitle(kwargs['subtitle'])
+        if 'xlabel' in kwargs:
+            self._chart.set_xlabel(kwargs['xlabel'])
+        if 'ylabel' in kwargs:
+            self._chart.set_ylabel(kwargs['ylabel'])
         return self
 
     def show(self):

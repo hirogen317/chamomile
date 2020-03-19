@@ -18,8 +18,24 @@ summary: "summary"
 -->
 
 <div class="container" id="notebook-container">
-    
+    {% raw %}
+        
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/hao.yan/.local/share/virtualenvs/chamomile-Jm9o6Nds/lib/python3.7/site-packages/pandas/compat/__init__.py:117: UserWarning: Could not import the lzma module. Your installed Python is incomplete. Attempting to use lzma compression will result in a RuntimeError.
+  warnings.warn(msg)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
@@ -76,7 +92,7 @@ summary: "summary"
 
     <div class="bk-root">
         <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
-        <span id="1001">Loading BokehJS ...</span>
+        <span id="1387">Loading BokehJS ...</span>
     </div>
 </div>
 
@@ -87,10 +103,10 @@ summary: "summary"
 
 
 
-<div id="bf1e54de-66c3-44ad-8968-2b5fbd264d42"></div>
+<div id="cccb9571-d701-46b8-b571-6a1e2b77b104"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
+var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
 
 (function(root) {
   function now() {
@@ -250,7 +266,7 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
      "</div>"}};
 
   function display_loaded() {
-    var el = document.getElementById("1001");
+    var el = document.getElementById("1387");
     if (el != null) {
       el.textContent = "BokehJS is loading...";
     }
@@ -326,9 +342,9 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
       console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
       document.head.appendChild(element);
     }
-  };var element = document.getElementById("1001");
+  };var element = document.getElementById("1387");
   if (element == null) {
-    console.error("Bokeh: ERROR: autoload.js configured with elementid '1001' but no matching script tag was found. ")
+    console.error("Bokeh: ERROR: autoload.js configured with elementid '1387' but no matching script tag was found. ")
     return false;
   }
 
@@ -368,7 +384,7 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
       console.log("Bokeh: BokehJS failed to load within specified timeout.");
       root._bokeh_failed_load = true;
     } else if (force !== true) {
-      var cell = $(document.getElementById("1001")).parents('.cell').data().cell;
+      var cell = $(document.getElementById("1387")).parents('.cell').data().cell;
       cell.output_area.append_execute_result(NB_LOAD_WARNING)
     }
 
@@ -405,7 +421,7 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="PlotLine" class="doc_header"><code>class</code> <code>PlotLine</code><a href="https://github.com/hirogen317/chamomile/tree/master/chamomile/chart/plot_line.py#L17" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PlotLine</code>(<strong><code>chart</code></strong>=<em><code>None</code></em>, <strong><code>x_axis_type</code></strong>=<em><code>'linear'</code></em>) :: <a href="/chamomile/chart_base_plot#BasePlot"><code>BasePlot</code></a></p>
+<h2 id="PlotLine" class="doc_header"><code>class</code> <code>PlotLine</code><a href="https://github.com/hirogen317/chamomile/tree/master/chamomile/chart/plot_line.py#L18" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PlotLine</code>(<strong><code>chart</code></strong>=<em><code>None</code></em>, <strong><code>x_axis_type</code></strong>=<em><code>'linear'</code></em>) :: <a href="/chamomile/chart_base_plot#BasePlot"><code>BasePlot</code></a></p>
 </blockquote>
 
 </div>
@@ -424,7 +440,7 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2020</span><span class="p">],</span>
     <span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;momo&#39;</span><span class="p">,</span> <span class="s1">&#39;momo&#39;</span><span class="p">,</span> <span class="s1">&#39;momo&#39;</span><span class="p">,</span> <span class="s1">&#39;momo&#39;</span><span class="p">,</span> <span class="s1">&#39;momo&#39;</span> <span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">,</span> <span class="s1">&#39;melon&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span> <span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
+    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">10.11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span> <span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
 <span class="p">}</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -432,6 +448,7 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
 <span class="n">pl</span> <span class="o">=</span> <span class="n">PlotLine</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;fruit&#39;</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;fruits sales&#39;</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s1">&#39;by year&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;price per kilo($)&#39;</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;fruit&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 </pre></div>
 
@@ -445,7 +462,8 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>10
+<pre>float
+10.11
 </pre>
 </div>
 </div>
@@ -460,7 +478,7 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
 
 
 
-  <div class="bk-root" id="552a2c16-9ef7-43b2-990b-603d75206d7f" data-root-id="1002"></div>
+  <div class="bk-root" id="d58c53be-091f-4998-8582-2f435d877c55" data-root-id="1783"></div>
 
 </div>
 
@@ -471,15 +489,15 @@ var element = $('#bf1e54de-66c3-44ad-8968-2b5fbd264d42');
 
 
 
-<div id="86a06c72-625a-49fa-bf7a-32e241efeaa9"></div>
+<div id="173dd34e-3274-4fe4-8ef5-fb0854b9830a"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#86a06c72-625a-49fa-bf7a-32e241efeaa9');
+var element = $('#173dd34e-3274-4fe4-8ef5-fb0854b9830a');
 (function(root) {
   function embed_document(root) {
     
-  var docs_json = {"0150699e-d5bd-4aad-a80b-1baf82cf8c9b":{"roots":{"references":[{"attributes":{"background_fill_color":{"value":"white"},"below":[{"id":"1011","type":"LinearAxis"}],"border_fill_color":{"value":"white"},"center":[{"id":"1015","type":"Grid"},{"id":"1020","type":"Grid"},{"id":"1051","type":"Legend"}],"left":[{"id":"1016","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"1043","type":"GlyphRenderer"},{"id":"1056","type":"GlyphRenderer"},{"id":"1070","type":"GlyphRenderer"}],"title":{"id":"1034","type":"Title"},"toolbar":{"id":"1027","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"1003","type":"DataRange1d"},"x_scale":{"id":"1007","type":"LinearScale"},"y_range":{"id":"1038","type":"Range1d"},"y_scale":{"id":"1009","type":"LinearScale"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1017","type":"BasicTicker"},{"attributes":{"label":{"value":"momo"},"renderers":[{"id":"1056","type":"GlyphRenderer"}]},"id":"1066","type":"LegendItem"},{"attributes":{"items":[{"id":"1052","type":"LegendItem"},{"id":"1066","type":"LegendItem"},{"id":"1082","type":"LegendItem"}],"location":"top_left","title":"fruit"},"id":"1051","type":"Legend"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"1017","type":"BasicTicker"}},"id":"1020","type":"Grid"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":[20,20,21,22,23]},"selected":{"id":"1093","type":"Selection"},"selection_policy":{"id":"1094","type":"UnionRenderers"}},"id":"1067","type":"ColumnDataSource"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1068","type":"Line"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1055","type":"Line"},{"attributes":{"label":{"value":"apple"},"renderers":[{"id":"1043","type":"GlyphRenderer"}]},"id":"1052","type":"LegendItem"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1069","type":"Line"},{"attributes":{"data_source":{"id":"1067","type":"ColumnDataSource"},"glyph":{"id":"1068","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1069","type":"Line"},"selection_glyph":null,"view":{"id":"1071","type":"CDSView"}},"id":"1070","type":"GlyphRenderer"},{"attributes":{},"id":"1021","type":"PanTool"},{"attributes":{"source":{"id":"1067","type":"ColumnDataSource"}},"id":"1071","type":"CDSView"},{"attributes":{"overlay":{"id":"1050","type":"BoxAnnotation"}},"id":"1023","type":"BoxZoomTool"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":[15,20,11,12,13]},"selected":{"id":"1080","type":"Selection"},"selection_policy":{"id":"1081","type":"UnionRenderers"}},"id":"1053","type":"ColumnDataSource"},{"attributes":{},"id":"1022","type":"WheelZoomTool"},{"attributes":{},"id":"1080","type":"Selection"},{"attributes":{},"id":"1024","type":"SaveTool"},{"attributes":{"source":{"id":"1053","type":"ColumnDataSource"}},"id":"1057","type":"CDSView"},{"attributes":{},"id":"1081","type":"UnionRenderers"},{"attributes":{"source":{"id":"1040","type":"ColumnDataSource"}},"id":"1044","type":"CDSView"},{"attributes":{},"id":"1025","type":"ResetTool"},{"attributes":{"label":{"value":"melon"},"renderers":[{"id":"1070","type":"GlyphRenderer"}]},"id":"1082","type":"LegendItem"},{"attributes":{},"id":"1026","type":"HelpTool"},{"attributes":{"callback":null},"id":"1003","type":"DataRange1d"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"1021","type":"PanTool"},{"id":"1022","type":"WheelZoomTool"},{"id":"1023","type":"BoxZoomTool"},{"id":"1024","type":"SaveTool"},{"id":"1025","type":"ResetTool"},{"id":"1026","type":"HelpTool"}]},"id":"1027","type":"Toolbar"},{"attributes":{},"id":"1094","type":"UnionRenderers"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1050","type":"BoxAnnotation"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1042","type":"Line"},{"attributes":{"text":"","text_color":{"value":"#333333"},"text_font_size":{"value":"16pt"}},"id":"1034","type":"Title"},{"attributes":{},"id":"1007","type":"LinearScale"},{"attributes":{},"id":"1064","type":"Selection"},{"attributes":{},"id":"1049","type":"BasicTickFormatter"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":[10,11,12,13,11]},"selected":{"id":"1064","type":"Selection"},"selection_policy":{"id":"1065","type":"UnionRenderers"}},"id":"1040","type":"ColumnDataSource"},{"attributes":{},"id":"1009","type":"LinearScale"},{"attributes":{"line_color":"#d62728","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1041","type":"Line"},{"attributes":{},"id":"1065","type":"UnionRenderers"},{"attributes":{},"id":"1093","type":"Selection"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"1049","type":"BasicTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"1012","type":"BasicTicker"}},"id":"1011","type":"LinearAxis"},{"attributes":{"data_source":{"id":"1053","type":"ColumnDataSource"},"glyph":{"id":"1054","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1055","type":"Line"},"selection_glyph":null,"view":{"id":"1057","type":"CDSView"}},"id":"1056","type":"GlyphRenderer"},{"attributes":{},"id":"1012","type":"BasicTicker"},{"attributes":{"callback":null,"end":23,"start":10},"id":"1038","type":"Range1d"},{"attributes":{"grid_line_color":null,"ticker":{"id":"1012","type":"BasicTicker"}},"id":"1015","type":"Grid"},{"attributes":{"data_source":{"id":"1040","type":"ColumnDataSource"},"glyph":{"id":"1041","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1042","type":"Line"},"selection_glyph":null,"view":{"id":"1044","type":"CDSView"}},"id":"1043","type":"GlyphRenderer"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1054","type":"Line"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":null,"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"1017","type":"BasicTicker"}},"id":"1016","type":"LinearAxis"}],"root_ids":["1002"]},"title":"Bokeh Application","version":"1.4.0"}};
-  var render_items = [{"docid":"0150699e-d5bd-4aad-a80b-1baf82cf8c9b","roots":{"1002":"552a2c16-9ef7-43b2-990b-603d75206d7f"}}];
+  var docs_json = {"1c8d185d-c449-4a83-800c-ce375e9f3f8e":{"roots":{"references":[{"attributes":{"above":[{"id":"1819","type":"Title"}],"background_fill_color":{"value":"white"},"below":[{"id":"1792","type":"LinearAxis"}],"border_fill_color":{"value":"white"},"center":[{"id":"1796","type":"Grid"},{"id":"1801","type":"Grid"},{"id":"1834","type":"Legend"}],"left":[{"id":"1797","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"1826","type":"GlyphRenderer"},{"id":"1839","type":"GlyphRenderer"},{"id":"1853","type":"GlyphRenderer"}],"title":{"id":"1815","type":"Title"},"toolbar":{"id":"1808","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"1784","type":"DataRange1d"},"x_scale":{"id":"1788","type":"LinearScale"},"y_range":{"id":"1820","type":"Range1d"},"y_scale":{"id":"1790","type":"LinearScale"}},"id":"1783","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1923","type":"Selection"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"1831","type":"BasicTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"1793","type":"BasicTicker"}},"id":"1792","type":"LinearAxis"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"AAAAAAAANEAAAAAAAAA0QAAAAAAAADVAAAAAAAAANkAAAAAAAAA3QA==","dtype":"float64","shape":[5]}},"selected":{"id":"1923","type":"Selection"},"selection_policy":{"id":"1924","type":"UnionRenderers"}},"id":"1850","type":"ColumnDataSource"},{"attributes":{},"id":"1793","type":"BasicTicker"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"AAAAAAAALkAAAAAAAAA0QAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQA==","dtype":"float64","shape":[5]}},"selected":{"id":"1862","type":"Selection"},"selection_policy":{"id":"1863","type":"UnionRenderers"}},"id":"1836","type":"ColumnDataSource"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1851","type":"Line"},{"attributes":{"data_source":{"id":"1823","type":"ColumnDataSource"},"glyph":{"id":"1824","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1825","type":"Line"},"selection_glyph":null,"view":{"id":"1827","type":"CDSView"}},"id":"1826","type":"GlyphRenderer"},{"attributes":{"grid_line_color":null,"ticker":{"id":"1793","type":"BasicTicker"}},"id":"1796","type":"Grid"},{"attributes":{"callback":null,"end":23.0,"start":10.11},"id":"1820","type":"Range1d"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1852","type":"Line"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"1821","type":"NumeralTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"1798","type":"BasicTicker"}},"id":"1797","type":"LinearAxis"},{"attributes":{"data_source":{"id":"1850","type":"ColumnDataSource"},"glyph":{"id":"1851","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1852","type":"Line"},"selection_glyph":null,"view":{"id":"1854","type":"CDSView"}},"id":"1853","type":"GlyphRenderer"},{"attributes":{"text":"","text_color":{"value":"#333333"},"text_font_size":{"value":"16pt"}},"id":"1815","type":"Title"},{"attributes":{},"id":"1798","type":"BasicTicker"},{"attributes":{"source":{"id":"1850","type":"ColumnDataSource"}},"id":"1854","type":"CDSView"},{"attributes":{"data_source":{"id":"1836","type":"ColumnDataSource"},"glyph":{"id":"1837","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1838","type":"Line"},"selection_glyph":null,"view":{"id":"1840","type":"CDSView"}},"id":"1839","type":"GlyphRenderer"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"1798","type":"BasicTicker"}},"id":"1801","type":"Grid"},{"attributes":{"label":{"value":"apple"},"renderers":[{"id":"1826","type":"GlyphRenderer"}]},"id":"1835","type":"LegendItem"},{"attributes":{},"id":"1862","type":"Selection"},{"attributes":{},"id":"1788","type":"LinearScale"},{"attributes":{"source":{"id":"1836","type":"ColumnDataSource"}},"id":"1840","type":"CDSView"},{"attributes":{},"id":"1863","type":"UnionRenderers"},{"attributes":{},"id":"1790","type":"LinearScale"},{"attributes":{"label":{"value":"melon"},"renderers":[{"id":"1853","type":"GlyphRenderer"}]},"id":"1865","type":"LegendItem"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1838","type":"Line"},{"attributes":{},"id":"1802","type":"PanTool"},{"attributes":{},"id":"1924","type":"UnionRenderers"},{"attributes":{"source":{"id":"1823","type":"ColumnDataSource"}},"id":"1827","type":"CDSView"},{"attributes":{},"id":"1846","type":"Selection"},{"attributes":{},"id":"1803","type":"WheelZoomTool"},{"attributes":{"overlay":{"id":"1833","type":"BoxAnnotation"}},"id":"1804","type":"BoxZoomTool"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1837","type":"Line"},{"attributes":{},"id":"1805","type":"SaveTool"},{"attributes":{"items":[{"id":"1835","type":"LegendItem"},{"id":"1849","type":"LegendItem"},{"id":"1865","type":"LegendItem"}],"location":"top_left","title":"fruit"},"id":"1834","type":"Legend"},{"attributes":{"callback":null},"id":"1784","type":"DataRange1d"},{"attributes":{},"id":"1806","type":"ResetTool"},{"attributes":{"format":"0.000"},"id":"1821","type":"NumeralTickFormatter"},{"attributes":{},"id":"1807","type":"HelpTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1833","type":"BoxAnnotation"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"1802","type":"PanTool"},{"id":"1803","type":"WheelZoomTool"},{"id":"1804","type":"BoxZoomTool"},{"id":"1805","type":"SaveTool"},{"id":"1806","type":"ResetTool"},{"id":"1807","type":"HelpTool"}]},"id":"1808","type":"Toolbar"},{"attributes":{"label":{"value":"momo"},"renderers":[{"id":"1839","type":"GlyphRenderer"}]},"id":"1849","type":"LegendItem"},{"attributes":{"text":"","text_color":{"value":"#666666"}},"id":"1819","type":"Title"},{"attributes":{},"id":"1847","type":"UnionRenderers"},{"attributes":{},"id":"1831","type":"BasicTickFormatter"},{"attributes":{"line_color":"#d62728","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1824","type":"Line"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"uB6F61E4JEAAAAAAAAAmQAAAAAAAAChAAAAAAAAAKkAAAAAAAAAmQA==","dtype":"float64","shape":[5]}},"selected":{"id":"1846","type":"Selection"},"selection_policy":{"id":"1847","type":"UnionRenderers"}},"id":"1823","type":"ColumnDataSource"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1825","type":"Line"}],"root_ids":["1783"]},"title":"Bokeh Application","version":"1.4.0"}};
+  var render_items = [{"docid":"1c8d185d-c449-4a83-800c-ce375e9f3f8e","roots":{"1783":"d58c53be-091f-4998-8582-2f435d877c55"}}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
 
   }
@@ -508,73 +526,32 @@ var element = $('#86a06c72-625a-49fa-bf7a-32e241efeaa9');
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-22-abab71745640&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span> pl<span class="ansi-blue-fg">.</span>line<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;price&#39;</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;fruit&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span> pl<span class="ansi-blue-fg">.</span>show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 12</span><span class="ansi-red-fg"> </span>pl<span class="ansi-blue-fg">.</span>set_properties<span class="ansi-blue-fg">(</span>title<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;fruits sales&#39;</span><span class="ansi-blue-fg">,</span> subtitle<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;by year&#39;</span><span class="ansi-blue-fg">,</span> xlabel<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">,</span> ylabel<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;price per kilo($)&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> pd<span class="ansi-blue-fg">.</span>pivot_table<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> index<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;fruit&#39;</span><span class="ansi-blue-fg">,</span> values<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;price&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>reset_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<span class="ansi-green-fg">~/code/hirogen/chamomile/chamomile/chart/base_plot.py</span> in <span class="ansi-cyan-fg">set_properties</span><span class="ansi-blue-fg">(self, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     50</span>             self<span class="ansi-blue-fg">.</span>_chart<span class="ansi-blue-fg">.</span>set_subtitle<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;subtitle&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     51</span>         <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">&#39;xlabel&#39;</span> <span class="ansi-green-fg">in</span> kwargs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 52</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_chart<span class="ansi-blue-fg">.</span>set_xlabel<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;xlabel&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     53</span>         <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">&#39;ylabel&#39;</span> <span class="ansi-green-fg">in</span> kwargs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span>             self<span class="ansi-blue-fg">.</span>_chart<span class="ansi-blue-fg">.</span>set_ylabel<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;ylabel&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="ansi-green-fg">~/code/hirogen/chamomile/chamomile/chart/chart.py</span> in <span class="ansi-cyan-fg">set_xlabel</span><span class="ansi-blue-fg">(self, label)</span>
+<span class="ansi-green-intense-fg ansi-bold">     49</span> 
+<span class="ansi-green-intense-fg ansi-bold">     50</span>     <span class="ansi-green-fg">def</span> set_xlabel<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 51</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">.</span>xaxis<span class="ansi-blue-fg">.</span>axis_label <span class="ansi-blue-fg">=</span> xlabel
+<span class="ansi-green-intense-fg ansi-bold">     52</span>         <span class="ansi-green-fg">return</span> self
+<span class="ansi-green-intense-fg ansi-bold">     53</span> 
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>fruit</th>
-      <th>year</th>
-      <th>apple</th>
-      <th>melon</th>
-      <th>momo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2016</td>
-      <td>10</td>
-      <td>20</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2017</td>
-      <td>11</td>
-      <td>20</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2018</td>
-      <td>12</td>
-      <td>21</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2019</td>
-      <td>13</td>
-      <td>22</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020</td>
-      <td>11</td>
-      <td>23</td>
-      <td>13</td>
-    </tr>
-  </tbody>
-</table>
+<span class="ansi-red-fg">NameError</span>: name &#39;xlabel&#39; is not defined</pre>
 </div>
-</div>
-
 </div>
 
 </div>
@@ -606,12 +583,59 @@ var element = $('#86a06c72-625a-49fa-bf7a-32e241efeaa9');
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">~/.local/share/virtualenvs/chamomile-Jm9o6Nds/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2645</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2646</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2647</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
 
+<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
 
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;dt&#39;
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-9-c8395439c9aa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-blue-fg">&#39;price&#39;</span><span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">12</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">13</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">12</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">13</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">11</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">22</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">23</span> <span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">22</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">23</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> }
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;dt&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>dtype <span class="ansi-blue-fg">==</span> object
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+<span class="ansi-green-intense-fg ansi-bold">      9</span> df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;price&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>dtype <span class="ansi-blue-fg">==</span> np<span class="ansi-blue-fg">.</span>int64
+
+<span class="ansi-green-fg">~/.local/share/virtualenvs/chamomile-Jm9o6Nds/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2798</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">.</span>nlevels <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2799</span>                 <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_getitem_multilevel<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 2800</span><span class="ansi-red-fg">             </span>indexer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2801</span>             <span class="ansi-green-fg">if</span> is_integer<span class="ansi-blue-fg">(</span>indexer<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2802</span>                 indexer <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>indexer<span class="ansi-blue-fg">]</span>
+
+<span class="ansi-green-fg">~/.local/share/virtualenvs/chamomile-Jm9o6Nds/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2646</span>                 <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2647</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2648</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_maybe_cast_indexer<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2649</span>         indexer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_indexer<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>key<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>method<span class="ansi-blue-fg">,</span> tolerance<span class="ansi-blue-fg">=</span>tolerance<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2650</span>         <span class="ansi-green-fg">if</span> indexer<span class="ansi-blue-fg">.</span>ndim <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span> <span class="ansi-green-fg">or</span> indexer<span class="ansi-blue-fg">.</span>size <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;dt&#39;</pre>
 </div>
-
 </div>
 
 </div>
@@ -659,10 +683,10 @@ var element = $('#86a06c72-625a-49fa-bf7a-32e241efeaa9');
 
 
 
-<div id="5e417b0c-f521-4469-8d28-03caa5db3b09"></div>
+<div id="415d8d82-df12-49f6-81cc-99b121271814"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#5e417b0c-f521-4469-8d28-03caa5db3b09');
+var element = $('#415d8d82-df12-49f6-81cc-99b121271814');
 (function(root) {
   function embed_document(root) {
     
@@ -851,10 +875,10 @@ linear
 
 
 
-<div id="aa3e9621-ef43-4066-bbc3-1601420c81d5"></div>
+<div id="353a407c-d74d-425a-8c85-377a338c8389"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#aa3e9621-ef43-4066-bbc3-1601420c81d5');
+var element = $('#353a407c-d74d-425a-8c85-377a338c8389');
 (function(root) {
   function embed_document(root) {
     
@@ -890,6 +914,7 @@ var element = $('#aa3e9621-ef43-4066-bbc3-1601420c81d5');
 </div>
 
 </div>
+    {% endraw %}
 </div>
  
 

@@ -9,6 +9,7 @@ from .base_plot import BasePlot
 
 import pandas as pd
 from bokeh.io import output_notebook
+import numpy as np
 
 from bokeh.models.ranges import FactorRange, Range1d
 from bokeh.io import show
@@ -18,8 +19,7 @@ class PlotLine(BasePlot):
     def __init__(self, chart=None, x_axis_type='linear'):
         super().__init__(chart=chart, x_axis_type=x_axis_type)
 
-
-    def line(self, df = None, x: str = None, y = None, color: str = None, text: str = None, color_order: list=None):
+    def line(self, df = None, x: str = None, y = None, color: str = None, text: str = None, color_order: list=None, ):
         p = self._chart.figure
 
         data = df.copy()
@@ -32,7 +32,10 @@ class PlotLine(BasePlot):
             p.x_range = Range1d(data[x].min() - pd.Timedelta(days=0.1*N), data[x].max() + pd.Timedelta(days=0.1*N))
 
         p.y_range = Range1d(data[y].min(), data[y].max())
-        p.yaxis.formatter = self.tick_formater('integer')
+        if data[y].dtype == np.int64:
+            p.yaxis.formatter = self.tick_formater('integer')
+        elif data[y].dtype == np.float64:
+            p.yaxis.formatter = self.tick_formater('float')
         if isinstance(y, str):
             if color is not None:
                 data = pd.pivot_table(data, index=x, columns=color, values=y).reset_index()
