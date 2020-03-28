@@ -1,8 +1,8 @@
 {
   "chamomile": {
     "Overview": "/",
-    "casual_inference.random_control_test": "/casual_inference_stats_test",
     "Title": "/utils_slack",
+    "casual_inference.random_control_test": "/casual_inference_stats_test",
     "chart.color": "/chart_color",
     "chart.data_format": "/chart_data_format",
     "chart.data_model": "/chart_data_model",

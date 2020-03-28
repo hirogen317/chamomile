@@ -92,7 +92,7 @@ summary: "summary"
 
     <div class="bk-root">
         <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
-        <span id="1387">Loading BokehJS ...</span>
+        <span id="1999">Loading BokehJS ...</span>
     </div>
 </div>
 
@@ -103,10 +103,10 @@ summary: "summary"
 
 
 
-<div id="cccb9571-d701-46b8-b571-6a1e2b77b104"></div>
+<div id="85b2f29e-4852-4120-83b6-b6c74de3167d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
+var element = $('#85b2f29e-4852-4120-83b6-b6c74de3167d');
 
 (function(root) {
   function now() {
@@ -266,7 +266,7 @@ var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
      "</div>"}};
 
   function display_loaded() {
-    var el = document.getElementById("1387");
+    var el = document.getElementById("1999");
     if (el != null) {
       el.textContent = "BokehJS is loading...";
     }
@@ -342,9 +342,9 @@ var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
       console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
       document.head.appendChild(element);
     }
-  };var element = document.getElementById("1387");
+  };var element = document.getElementById("1999");
   if (element == null) {
-    console.error("Bokeh: ERROR: autoload.js configured with elementid '1387' but no matching script tag was found. ")
+    console.error("Bokeh: ERROR: autoload.js configured with elementid '1999' but no matching script tag was found. ")
     return false;
   }
 
@@ -384,7 +384,7 @@ var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
       console.log("Bokeh: BokehJS failed to load within specified timeout.");
       root._bokeh_failed_load = true;
     } else if (force !== true) {
-      var cell = $(document.getElementById("1387")).parents('.cell').data().cell;
+      var cell = $(document.getElementById("1999")).parents('.cell').data().cell;
       cell.output_area.append_execute_result(NB_LOAD_WARNING)
     }
 
@@ -447,8 +447,9 @@ var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
 <span class="n">df</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">PlotLine</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;fruit&#39;</span><span class="p">)</span>
-<span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">set_properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;fruits sales&#39;</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s1">&#39;by year&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;price per kilo($)&#39;</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
 <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;fruit&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 </pre></div>
 
@@ -478,7 +479,7 @@ var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
 
 
 
-  <div class="bk-root" id="d58c53be-091f-4998-8582-2f435d877c55" data-root-id="1783"></div>
+  <div class="bk-root" id="c0d34888-eac5-4608-bc91-8085ab4adc08" data-root-id="2228"></div>
 
 </div>
 
@@ -489,15 +490,15 @@ var element = $('#cccb9571-d701-46b8-b571-6a1e2b77b104');
 
 
 
-<div id="173dd34e-3274-4fe4-8ef5-fb0854b9830a"></div>
+<div id="20f82e82-d815-4cbe-b477-6abc1bfd9ed2"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#173dd34e-3274-4fe4-8ef5-fb0854b9830a');
+var element = $('#20f82e82-d815-4cbe-b477-6abc1bfd9ed2');
 (function(root) {
   function embed_document(root) {
     
-  var docs_json = {"1c8d185d-c449-4a83-800c-ce375e9f3f8e":{"roots":{"references":[{"attributes":{"above":[{"id":"1819","type":"Title"}],"background_fill_color":{"value":"white"},"below":[{"id":"1792","type":"LinearAxis"}],"border_fill_color":{"value":"white"},"center":[{"id":"1796","type":"Grid"},{"id":"1801","type":"Grid"},{"id":"1834","type":"Legend"}],"left":[{"id":"1797","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"1826","type":"GlyphRenderer"},{"id":"1839","type":"GlyphRenderer"},{"id":"1853","type":"GlyphRenderer"}],"title":{"id":"1815","type":"Title"},"toolbar":{"id":"1808","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"1784","type":"DataRange1d"},"x_scale":{"id":"1788","type":"LinearScale"},"y_range":{"id":"1820","type":"Range1d"},"y_scale":{"id":"1790","type":"LinearScale"}},"id":"1783","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1923","type":"Selection"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"1831","type":"BasicTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"1793","type":"BasicTicker"}},"id":"1792","type":"LinearAxis"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"AAAAAAAANEAAAAAAAAA0QAAAAAAAADVAAAAAAAAANkAAAAAAAAA3QA==","dtype":"float64","shape":[5]}},"selected":{"id":"1923","type":"Selection"},"selection_policy":{"id":"1924","type":"UnionRenderers"}},"id":"1850","type":"ColumnDataSource"},{"attributes":{},"id":"1793","type":"BasicTicker"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"AAAAAAAALkAAAAAAAAA0QAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQA==","dtype":"float64","shape":[5]}},"selected":{"id":"1862","type":"Selection"},"selection_policy":{"id":"1863","type":"UnionRenderers"}},"id":"1836","type":"ColumnDataSource"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1851","type":"Line"},{"attributes":{"data_source":{"id":"1823","type":"ColumnDataSource"},"glyph":{"id":"1824","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1825","type":"Line"},"selection_glyph":null,"view":{"id":"1827","type":"CDSView"}},"id":"1826","type":"GlyphRenderer"},{"attributes":{"grid_line_color":null,"ticker":{"id":"1793","type":"BasicTicker"}},"id":"1796","type":"Grid"},{"attributes":{"callback":null,"end":23.0,"start":10.11},"id":"1820","type":"Range1d"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1852","type":"Line"},{"attributes":{"axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"1821","type":"NumeralTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"1798","type":"BasicTicker"}},"id":"1797","type":"LinearAxis"},{"attributes":{"data_source":{"id":"1850","type":"ColumnDataSource"},"glyph":{"id":"1851","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1852","type":"Line"},"selection_glyph":null,"view":{"id":"1854","type":"CDSView"}},"id":"1853","type":"GlyphRenderer"},{"attributes":{"text":"","text_color":{"value":"#333333"},"text_font_size":{"value":"16pt"}},"id":"1815","type":"Title"},{"attributes":{},"id":"1798","type":"BasicTicker"},{"attributes":{"source":{"id":"1850","type":"ColumnDataSource"}},"id":"1854","type":"CDSView"},{"attributes":{"data_source":{"id":"1836","type":"ColumnDataSource"},"glyph":{"id":"1837","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1838","type":"Line"},"selection_glyph":null,"view":{"id":"1840","type":"CDSView"}},"id":"1839","type":"GlyphRenderer"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"1798","type":"BasicTicker"}},"id":"1801","type":"Grid"},{"attributes":{"label":{"value":"apple"},"renderers":[{"id":"1826","type":"GlyphRenderer"}]},"id":"1835","type":"LegendItem"},{"attributes":{},"id":"1862","type":"Selection"},{"attributes":{},"id":"1788","type":"LinearScale"},{"attributes":{"source":{"id":"1836","type":"ColumnDataSource"}},"id":"1840","type":"CDSView"},{"attributes":{},"id":"1863","type":"UnionRenderers"},{"attributes":{},"id":"1790","type":"LinearScale"},{"attributes":{"label":{"value":"melon"},"renderers":[{"id":"1853","type":"GlyphRenderer"}]},"id":"1865","type":"LegendItem"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1838","type":"Line"},{"attributes":{},"id":"1802","type":"PanTool"},{"attributes":{},"id":"1924","type":"UnionRenderers"},{"attributes":{"source":{"id":"1823","type":"ColumnDataSource"}},"id":"1827","type":"CDSView"},{"attributes":{},"id":"1846","type":"Selection"},{"attributes":{},"id":"1803","type":"WheelZoomTool"},{"attributes":{"overlay":{"id":"1833","type":"BoxAnnotation"}},"id":"1804","type":"BoxZoomTool"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1837","type":"Line"},{"attributes":{},"id":"1805","type":"SaveTool"},{"attributes":{"items":[{"id":"1835","type":"LegendItem"},{"id":"1849","type":"LegendItem"},{"id":"1865","type":"LegendItem"}],"location":"top_left","title":"fruit"},"id":"1834","type":"Legend"},{"attributes":{"callback":null},"id":"1784","type":"DataRange1d"},{"attributes":{},"id":"1806","type":"ResetTool"},{"attributes":{"format":"0.000"},"id":"1821","type":"NumeralTickFormatter"},{"attributes":{},"id":"1807","type":"HelpTool"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"1833","type":"BoxAnnotation"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"1802","type":"PanTool"},{"id":"1803","type":"WheelZoomTool"},{"id":"1804","type":"BoxZoomTool"},{"id":"1805","type":"SaveTool"},{"id":"1806","type":"ResetTool"},{"id":"1807","type":"HelpTool"}]},"id":"1808","type":"Toolbar"},{"attributes":{"label":{"value":"momo"},"renderers":[{"id":"1839","type":"GlyphRenderer"}]},"id":"1849","type":"LegendItem"},{"attributes":{"text":"","text_color":{"value":"#666666"}},"id":"1819","type":"Title"},{"attributes":{},"id":"1847","type":"UnionRenderers"},{"attributes":{},"id":"1831","type":"BasicTickFormatter"},{"attributes":{"line_color":"#d62728","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1824","type":"Line"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"uB6F61E4JEAAAAAAAAAmQAAAAAAAAChAAAAAAAAAKkAAAAAAAAAmQA==","dtype":"float64","shape":[5]}},"selected":{"id":"1846","type":"Selection"},"selection_policy":{"id":"1847","type":"UnionRenderers"}},"id":"1823","type":"ColumnDataSource"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"1825","type":"Line"}],"root_ids":["1783"]},"title":"Bokeh Application","version":"1.4.0"}};
-  var render_items = [{"docid":"1c8d185d-c449-4a83-800c-ce375e9f3f8e","roots":{"1783":"d58c53be-091f-4998-8582-2f435d877c55"}}];
+  var docs_json = {"06487b8d-0ced-41a8-87c0-cb9fd0d10b1c":{"roots":{"references":[{"attributes":{"above":[{"id":"2264","type":"Title"}],"background_fill_color":{"value":"white"},"below":[{"id":"2237","type":"LinearAxis"}],"border_fill_color":{"value":"white"},"center":[{"id":"2241","type":"Grid"},{"id":"2246","type":"Grid"},{"id":"2279","type":"Legend"}],"left":[{"id":"2242","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"2271","type":"GlyphRenderer"},{"id":"2284","type":"GlyphRenderer"},{"id":"2298","type":"GlyphRenderer"}],"title":{"id":"2260","type":"Title"},"toolbar":{"id":"2253","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"2229","type":"DataRange1d"},"x_scale":{"id":"2233","type":"LinearScale"},"y_range":{"id":"2265","type":"Range1d"},"y_scale":{"id":"2235","type":"LinearScale"}},"id":"2228","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"2251","type":"ResetTool"},{"attributes":{"format":"0.000"},"id":"2266","type":"NumeralTickFormatter"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"2278","type":"BoxAnnotation"},{"attributes":{"line_color":"#d62728","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"2269","type":"Line"},{"attributes":{},"id":"2238","type":"BasicTicker"},{"attributes":{},"id":"2252","type":"HelpTool"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"2270","type":"Line"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","logo":null,"tools":[{"id":"2247","type":"PanTool"},{"id":"2248","type":"WheelZoomTool"},{"id":"2249","type":"BoxZoomTool"},{"id":"2250","type":"SaveTool"},{"id":"2251","type":"ResetTool"},{"id":"2252","type":"HelpTool"}]},"id":"2253","type":"Toolbar"},{"attributes":{},"id":"2233","type":"LinearScale"},{"attributes":{"text":"by year","text_color":{"value":"#666666"}},"id":"2264","type":"Title"},{"attributes":{"data_source":{"id":"2281","type":"ColumnDataSource"},"glyph":{"id":"2282","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2283","type":"Line"},"selection_glyph":null,"view":{"id":"2285","type":"CDSView"}},"id":"2284","type":"GlyphRenderer"},{"attributes":{},"id":"2276","type":"BasicTickFormatter"},{"attributes":{"label":{"value":"momo"},"renderers":[{"id":"2284","type":"GlyphRenderer"}]},"id":"2294","type":"LegendItem"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"AAAAAAAANEAAAAAAAAA0QAAAAAAAADVAAAAAAAAANkAAAAAAAAA3QA==","dtype":"float64","shape":[5]}},"selected":{"id":"2393","type":"Selection"},"selection_policy":{"id":"2394","type":"UnionRenderers"}},"id":"2295","type":"ColumnDataSource"},{"attributes":{},"id":"2292","type":"UnionRenderers"},{"attributes":{},"id":"2235","type":"LinearScale"},{"attributes":{"label":{"value":"apple"},"renderers":[{"id":"2271","type":"GlyphRenderer"}]},"id":"2280","type":"LegendItem"},{"attributes":{"data_source":{"id":"2268","type":"ColumnDataSource"},"glyph":{"id":"2269","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2270","type":"Line"},"selection_glyph":null,"view":{"id":"2272","type":"CDSView"}},"id":"2271","type":"GlyphRenderer"},{"attributes":{"callback":null,"end":23.0,"start":10.11},"id":"2265","type":"Range1d"},{"attributes":{},"id":"2291","type":"Selection"},{"attributes":{"grid_line_color":null,"ticker":{"id":"2238","type":"BasicTicker"}},"id":"2241","type":"Grid"},{"attributes":{"source":{"id":"2281","type":"ColumnDataSource"}},"id":"2285","type":"CDSView"},{"attributes":{"axis_label":"price per kilo($)","axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"2266","type":"NumeralTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"2243","type":"BasicTicker"}},"id":"2242","type":"LinearAxis"},{"attributes":{"items":[{"id":"2280","type":"LegendItem"},{"id":"2294","type":"LegendItem"},{"id":"2310","type":"LegendItem"}],"location":"top_left","title":"fruit"},"id":"2279","type":"Legend"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"2297","type":"Line"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"2282","type":"Line"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"2283","type":"Line"},{"attributes":{"callback":null},"id":"2229","type":"DataRange1d"},{"attributes":{"line_color":"#7f7f7f","line_width":2,"x":{"field":"x"},"y":{"field":"y"}},"id":"2296","type":"Line"},{"attributes":{},"id":"2248","type":"WheelZoomTool"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"AAAAAAAALkAAAAAAAAA0QAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQA==","dtype":"float64","shape":[5]}},"selected":{"id":"2307","type":"Selection"},"selection_policy":{"id":"2308","type":"UnionRenderers"}},"id":"2281","type":"ColumnDataSource"},{"attributes":{"data_source":{"id":"2295","type":"ColumnDataSource"},"glyph":{"id":"2296","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2297","type":"Line"},"selection_glyph":null,"view":{"id":"2299","type":"CDSView"}},"id":"2298","type":"GlyphRenderer"},{"attributes":{"callback":null,"data":{"x":[2016,2017,2018,2019,2020],"y":{"__ndarray__":"uB6F61E4JEAAAAAAAAAmQAAAAAAAAChAAAAAAAAAKkAAAAAAAAAmQA==","dtype":"float64","shape":[5]}},"selected":{"id":"2291","type":"Selection"},"selection_policy":{"id":"2292","type":"UnionRenderers"}},"id":"2268","type":"ColumnDataSource"},{"attributes":{"axis_label":"year","axis_label_text_color":{"value":"#666666"},"axis_line_color":{"value":"#C0C0C0"},"formatter":{"id":"2276","type":"BasicTickFormatter"},"major_label_text_color":{"value":"#898989"},"major_tick_line_color":{"value":"#C0C0C0"},"minor_tick_line_color":{"value":null},"ticker":{"id":"2238","type":"BasicTicker"}},"id":"2237","type":"LinearAxis"},{"attributes":{"source":{"id":"2295","type":"ColumnDataSource"}},"id":"2299","type":"CDSView"},{"attributes":{"source":{"id":"2268","type":"ColumnDataSource"}},"id":"2272","type":"CDSView"},{"attributes":{},"id":"2307","type":"Selection"},{"attributes":{},"id":"2393","type":"Selection"},{"attributes":{"text":"fruits sales","text_color":{"value":"#333333"},"text_font_size":{"value":"16pt"}},"id":"2260","type":"Title"},{"attributes":{},"id":"2308","type":"UnionRenderers"},{"attributes":{},"id":"2247","type":"PanTool"},{"attributes":{"label":{"value":"melon"},"renderers":[{"id":"2298","type":"GlyphRenderer"}]},"id":"2310","type":"LegendItem"},{"attributes":{},"id":"2250","type":"SaveTool"},{"attributes":{},"id":"2394","type":"UnionRenderers"},{"attributes":{"overlay":{"id":"2278","type":"BoxAnnotation"}},"id":"2249","type":"BoxZoomTool"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"2243","type":"BasicTicker"}},"id":"2246","type":"Grid"},{"attributes":{},"id":"2243","type":"BasicTicker"}],"root_ids":["2228"]},"title":"Bokeh Application","version":"1.4.0"}};
+  var render_items = [{"docid":"06487b8d-0ced-41a8-87c0-cb9fd0d10b1c","roots":{"2228":"c0d34888-eac5-4608-bc91-8085ab4adc08"}}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
 
   }
@@ -526,32 +527,73 @@ var element = $('#173dd34e-3274-4fe4-8ef5-fb0854b9830a');
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-22-abab71745640&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> pl<span class="ansi-blue-fg">.</span>line<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;price&#39;</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;fruit&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> pl<span class="ansi-blue-fg">.</span>show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 12</span><span class="ansi-red-fg"> </span>pl<span class="ansi-blue-fg">.</span>set_properties<span class="ansi-blue-fg">(</span>title<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;fruits sales&#39;</span><span class="ansi-blue-fg">,</span> subtitle<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;by year&#39;</span><span class="ansi-blue-fg">,</span> xlabel<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">,</span> ylabel<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;price per kilo($)&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span> pd<span class="ansi-blue-fg">.</span>pivot_table<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> index<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;year&#39;</span><span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;fruit&#39;</span><span class="ansi-blue-fg">,</span> values<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;price&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>reset_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">~/code/hirogen/chamomile/chamomile/chart/base_plot.py</span> in <span class="ansi-cyan-fg">set_properties</span><span class="ansi-blue-fg">(self, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     50</span>             self<span class="ansi-blue-fg">.</span>_chart<span class="ansi-blue-fg">.</span>set_subtitle<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;subtitle&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     51</span>         <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">&#39;xlabel&#39;</span> <span class="ansi-green-fg">in</span> kwargs<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 52</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_chart<span class="ansi-blue-fg">.</span>set_xlabel<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;xlabel&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     53</span>         <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">&#39;ylabel&#39;</span> <span class="ansi-green-fg">in</span> kwargs<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     54</span>             self<span class="ansi-blue-fg">.</span>_chart<span class="ansi-blue-fg">.</span>set_ylabel<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;ylabel&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-green-fg">~/code/hirogen/chamomile/chamomile/chart/chart.py</span> in <span class="ansi-cyan-fg">set_xlabel</span><span class="ansi-blue-fg">(self, label)</span>
-<span class="ansi-green-intense-fg ansi-bold">     49</span> 
-<span class="ansi-green-intense-fg ansi-bold">     50</span>     <span class="ansi-green-fg">def</span> set_xlabel<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 51</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">.</span>xaxis<span class="ansi-blue-fg">.</span>axis_label <span class="ansi-blue-fg">=</span> xlabel
-<span class="ansi-green-intense-fg ansi-bold">     52</span>         <span class="ansi-green-fg">return</span> self
-<span class="ansi-green-intense-fg ansi-bold">     53</span> 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="ansi-red-fg">NameError</span>: name &#39;xlabel&#39; is not defined</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>fruit</th>
+      <th>year</th>
+      <th>apple</th>
+      <th>melon</th>
+      <th>momo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016</td>
+      <td>10.11</td>
+      <td>20.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2017</td>
+      <td>11.00</td>
+      <td>20.0</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2018</td>
+      <td>12.00</td>
+      <td>21.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2019</td>
+      <td>13.00</td>
+      <td>22.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>11.00</td>
+      <td>23.0</td>
+      <td>13.0</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+</div>
+
 </div>
 
 </div>
@@ -683,10 +725,10 @@ During handling of the above exception, another exception occurred:
 
 
 
-<div id="415d8d82-df12-49f6-81cc-99b121271814"></div>
+<div id="bcd7f2aa-d902-426e-911c-c7f14a879f4d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#415d8d82-df12-49f6-81cc-99b121271814');
+var element = $('#bcd7f2aa-d902-426e-911c-c7f14a879f4d');
 (function(root) {
   function embed_document(root) {
     
@@ -875,10 +917,10 @@ linear
 
 
 
-<div id="353a407c-d74d-425a-8c85-377a338c8389"></div>
+<div id="d6343b24-f6ba-4b97-bcab-410a4f29d483"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#353a407c-d74d-425a-8c85-377a338c8389');
+var element = $('#d6343b24-f6ba-4b97-bcab-410a4f29d483');
 (function(root) {
   function embed_document(root) {
     

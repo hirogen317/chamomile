@@ -6,7 +6,7 @@ __all__ = ['BasePlot']
 from .chart import Chart
 from bokeh.io import show
 from bokeh.io import output_notebook
-from .color import ColorDefault, ColorContrast2
+from .color import ColorDefault, ColorContrast2, ColorCompare3
 from bokeh.models.formatters import DatetimeTickFormatter, NumeralTickFormatter
 
 # Cell
@@ -19,6 +19,17 @@ class BasePlot():
         if palette is None:
             palette = ColorContrast2()
         self._palette = palette
+
+    def set_color_mode(self, color_mode):
+        if color_mode == 'two':
+            self._palette = ColorContrast2()
+        elif color_mode == 'three':
+            self._palette = ColorCompare3()
+        elif color_mode == 'more':
+            self._palette = ColorDefault()
+        else:
+            raise Exception("unsupported color_mode, please use 'two', 'three', or 'more'")
+        return self
 
     def hide_x():
         self._chart.figure.xaxis.major_tick_line_color = None

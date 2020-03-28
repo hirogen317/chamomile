@@ -56,7 +56,6 @@ class PlotLine(BasePlot):
         if color_order is not None:
             y = color_order
         for sy in y:
-
             p.line(data[x], data[sy], line_width=2, line_color=self.next_color(), legend_label=sy)
         if color:
             p.legend.title = color

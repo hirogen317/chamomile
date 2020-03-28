@@ -10,11 +10,11 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: casual_inference.random_control_test
-      url: /casual_inference_stats_test
-    - output: web,pdf
       title: Title
       url: /utils_slack
+    - output: web,pdf
+      title: casual_inference.random_control_test
+      url: /casual_inference_stats_test
     - output: web,pdf
       title: chart.color
       url: /chart_color

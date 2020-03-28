@@ -23,6 +23,9 @@ def cast_date(series, to='month', type='str'):
         return pd.to_datetime(series).astype(dt_type)
 
 
+
+# Cell
+
 def count_time_value(dataframe, ts_col, group_cols, by='day'):
     df = dataframe.copy()
     df[f'ts_{by}'] = cast_date(df[ts_col], to=by)
@@ -33,21 +36,21 @@ def count_time_value(dataframe, ts_col, group_cols, by='day'):
     return df.groupby(groups).size().reset_index(name='counts')
 
 # Cell
-def time_over_time(data_frame: pd.DataFrame = None, ts_col: str=None, v_col: str=None
-                          , g_col: str=None, shift: int=1, drop_last_value: bool=False)->pd.DataFrame:
+def time_over_time(data_frame: pd.DataFrame = None, ts: str=None, value: str=None
+                          , groups: str=None, shift: int=1, drop_last_value: bool=False)->pd.DataFrame:
     """
 
     return: series that contains time over time
     """
     df = data_frame.copy()
-    if g_col:
-        last_value_col = 'last_{g_col}_{v_col}'.format(g_col=g_col, v_col=v_col)
-        df[last_value_col] = df.groupby(g_col)[v_col].shift(shift)
+    if groups:
+        last_value_col = 'last_{g_col}_{v_col}'.format(g_col='_'.join(groups), v_col=value)
+        df[last_value_col] = df.groupby(groups)[value].shift(shift)
     else:
-        last_value_col = 'last_{v_col}'.format(v_col=v_col)
-        df[last_value_col] = df[v_col].shift(shift)
+        last_value_col = 'last_{v_col}'.format(v_col=value)
+        df[last_value_col] = df[value].shift(shift)
 
-    tot_col = '{value}_{u}o{u}_{shift}'.format(value=v_col, u=ts_col[0], shift=shift)
-    df[tot_col] = df[v_col] / df[last_value_col]
+    tot_col = '{value}_{u}o{u}_{shift}'.format(value=value, u=ts[0], shift=shift)
+    df[tot_col] = df[value] / df[last_value_col]
 
     return df[tot_col]

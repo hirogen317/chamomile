@@ -26,7 +26,6 @@ class Chart:
         self.style._apply_settings('chart')
         self._subtitle_glyph = self._add_subtitle_to_figure()
 
-
     def _initialize_figure(self, x_axis_type, y_axis_type):
         x_range = None
         y_range = None
